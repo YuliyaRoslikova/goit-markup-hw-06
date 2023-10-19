@@ -64,9 +64,9 @@
           </button>
         </div>
       </section>
-      <section class="section-services section">
+      <section class="section-services section" hidden>
         <div class="section-services__container container">
-          <h2 class="visually-hidden">Our Services</h2>
+          <h2 class="title services-title visually-hidden">Our Services</h2>
           <ul class="services">
             <li class="services__item">
               <div class="services__icon-container">
@@ -74,7 +74,7 @@
                   <use href="./images/icons.svg#icon-antenna"></use>
                 </svg>
               </div>
-              <h3 class="services__title title">Strategy</h3>
+              <h3 class="services__title subtitle title">Strategy</h3>
               <p class="services__content">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
@@ -86,7 +86,7 @@
                   <use href="./images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3 class="services__title title">Punctuality</h3>
+              <h3 class="services__title subtitle title">Punctuality</h3>
               <p class="services__content">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
@@ -98,7 +98,7 @@
                   <use href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3 class="services__title title">Diligence</h3>
+              <h3 class="services__title subtitle title">Diligence</h3>
               <p class="services__content">
                 Research and confirm brands that present the strongest digital
                 growth opportunities and minimize risk.
@@ -110,7 +110,7 @@
                   <use href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h3 class="services__title title">Technologies</h3>
+              <h3 class="services__title subtitle title">Technologies</h3>
               <p class="services__content">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
@@ -119,7 +119,7 @@
           </ul>
         </div>
       </section>
-      <section class="section-team section">
+      <section class="section-team section" hidden>
         <div class="container">
           <h2 class="section-team__title title">Our Team</h2>
           <ul class="members">
@@ -572,5 +572,113 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-open" id="backdrop" hidden>
+      <div class="modal">
+        <button type="button" class="modal__btn" id="modal-close">
+          <svg class="modal__btn-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-x-close"></use>
+          </svg>
+        </button>
+        <p class="modal__title title">
+          Leave your contacts and we will call you back
+        </p>
+        <form class="modal__form">
+          <div class="modal__field">
+            <label for="user-name" class="modal__label">Name</label>
+            <div class="input__box">
+              <input
+                type="text"
+                name="user-name"
+                class="modal__input"
+                placeholder=" "
+                id="user-name"
+              />
+              <svg class="modal__input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__field">
+            <label for="user-phone" class="modal__label">Phone</label>
+            <div class="input__box">
+              <input
+                type="tel"
+                name="user-phone"
+                class="modal__input"
+                placeholder=" "
+                id="user-phone"
+              />
+              <svg class="modal__input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__field">
+            <label for="user-email" class="modal__label">Email</label>
+            <div class="input__box">
+              <input
+                type="email"
+                name="user-email"
+                class="modal__input"
+                placeholder=" "
+                id="user-email"
+              />
+              <svg class="modal__input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__field modal__textarea-field">
+            <label for="user-comment" class="modal__label">Comment</label>
+            <textarea
+              name="user-comment"
+              class="modal__input modal__input-text"
+              placeholder="Text input"
+              id="user-comment"
+            ></textarea>
+          </div>
+          <div class="modal__check">
+            <input
+              type="checkbox"
+              name="user-privacy"
+              id="user-privacy"
+              class="text__input visually-hidden"
+              value="true"
+            />
+            <label for="user-privacy" class="check__text">
+              <span class="input__text-accept">
+                <svg class="input__icon-check" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="#" class="input__link">Privacy Policy</a>
+            </label>
+          </div>
+          <button type="submit" class="modal__btn-submit button">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- <script type="text/javascript">
+      const backdropRef = document.querySelector('#backdrop');
+
+      backdropRef
+        .querySelector('#modal-close')
+        .addEventListener('click', closeModal);
+
+      document
+        .querySelector('#show-modal')
+        .addEventListener('click', openModal);
+
+      function closeModal(event) {
+        backdropRef.classList.remove('is-open');
+      }
+
+      function openModal() {
+        backdropRef.classList.add('is-open');
+      }
+    </script> -->
   </body>
 </html>
